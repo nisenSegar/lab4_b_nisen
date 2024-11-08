@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAB 4</title>
+</head>
+<body>
+
+  <h2>Open Console to view the book collection details.</h2>
+
+  <script>
+    const bookData = {
+      "books": [
+        {
+          "title": "The Great Gatsby",
+          "author": "F. Scott Fitzgerald",
+          "publicationYear": 1925,
+          "genres": ["Fiction", "Classics"]
+        },
+        {
+          "title": "To Kill a Mockingbird",
+          "author": "Harper Lee",
+          "publicationYear": 1960,
+          "genres": ["Fiction", "Coming-of-Age"]
+        }
+      ]
+    };
+
+    console.log("Title of the first book:", bookData.books[0].title);
+    console.log("Author of the second book:", bookData.books[1].author);
+    console.log("Genres of all books:");
+    bookData.books.forEach((book, index) => {
+      console.log(`Book ${index + 1} genres:`, book.genres.join(", "));
+    });
+  </script>
+  
+</body>
+</html>
